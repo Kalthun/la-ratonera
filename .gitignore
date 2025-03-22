@@ -9,9 +9,37 @@ target/
 # MSVC Windows builds of rustc generate these, which store debugging information
 *.pdb
 
-# RustRover
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+# direnv (Nix)
+.direnv
+
+# Dioxus Template
+.dioxus
+/target
+/packages/playwright-tests/web/dist
+/packages/playwright-tests/fullstack/dist
+/dist
+.DS_Store
+/examples/assets/test_video.mp4
+static
+
+# new recommendation to keep the lockfile in for CI and reproducible builds
+# Cargo.lock
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+tarpaulin-report.html
+
+# Jetbrain
+.idea/
+node_modules/
+/test-results/
+/packages/playwright-report/
+/packages/playwright/.cache/
+
+
+# ignore the output of tmps
+tmp/
+bundle/
